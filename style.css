@@ -529,7 +529,7 @@ right: 20px;
     font-family: futura;
     font-size: 1.8vw;
   position: relative;
-  top: 2vh;
+  top: 1.5vh;
 }
 @media (max-width: 500px) {
     .jsdy2 h1{
@@ -689,6 +689,7 @@ right: 20px;
         object-fit: contain;
         object-position: center;
         margin-left: 5px;
+        border-radius: 15px;
     }
     .srch{
        gap: 20px;
