@@ -37,8 +37,9 @@ header {
     font-family: 'Futura', sans-serif;
 }
 .winning h5 {
-    font-size: 0.8em;
-    margin-left: 1.5vw;
+    font-size: 0.7em;
+    margin-left: 2.1vw;
+    text-transform: uppercase;
     font-family: 'Futura', sans-serif;
     color: #ffffff;
 }
@@ -244,7 +245,19 @@ header {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    animation: moveUpDown 2s ease-in-out infinite;
 }
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0); /* Start at original position */
+    }
+    50% {
+      transform: translateY(-20px); /* Move up */
+    }
+    100% {
+      transform: translateY(0); /* Move back to original position */
+    }
+  }
 .pg-2{
     height: 100%;
     width: 50%;
@@ -270,6 +283,7 @@ header {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    animation: moveUpDown 2s ease-in-out infinite;
 }
 
 .pg-4{
@@ -321,6 +335,7 @@ header {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    animation: moveUpDown 2s ease-in-out infinite;
 }
 .page5{
     height: 300px;
@@ -344,6 +359,7 @@ header {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    animation: moveUpDown 2s ease-in-out infinite;
 }
 .pg-8{
     height: 100%;
@@ -757,7 +773,8 @@ right: 20px;
 .tab{
     margin-right: 15vw
 } .ddoc h3{
-    font-size: 3.5vw}
+    font-size: 3.8vw;
+}
     .dow{
         height: 4vh;
         width: 35vw;
