@@ -733,7 +733,7 @@ right: 20px;
        font-size: 4vw;     
     }
     .pg-1 h2, .pg-4 h2, .pg-5 h2, .pg-8 h2 {
-        font-size: 0.7em; 
+        font-size: 0.9em; 
         text-align: center;
         margin-left: 0;
     }
@@ -774,6 +774,7 @@ right: 20px;
     width: 100%;
     border: 2px solid blue;
     object-fit:cover;
+    border-radius: 8px;
    
 }
 .sr1 p{
