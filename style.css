@@ -145,7 +145,43 @@ header {
 .rightm{
     height: 50%;
     width: 100%;
+margin-bottom: 25px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.rightmimg{
+    height: 80%;
+    width: 90%;
+    margin-bottom: 8vh;
+}
+.rightmimg img{
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
 
+}
+.righmti{
+    height:20%;
+    width: 100%;
+}
+.righmti h3{
+    color: #000dff;
+    font-family: futura;
+}
+.righmti{
+    height:20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.righmti p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #1900bc;
+  font-size: 0.5rem;
 }
 .left {
     height: 100%;
@@ -174,6 +210,36 @@ header {
 .right{
     height: 100%;
     width: 40%;
+    
+}
+.right .rightimg{
+   height: 70%;
+   width: 100%;
+}
+.rightimg img{
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    object-fit: contain;
+    
+}
+.vacvit{
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+.vacvit h1{
+ text-align: center;
+ font-family: futura;
+ color: #1100ff;
+ font-size:3rem;
+ margin-left: 3.5vw;
+}
+.vacvit p{
+color: #2e00fd;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-left: 8vw;
 }
 .jsdy2{
     height: 100px;
@@ -617,6 +683,9 @@ button{
 }
 
 @media (max-width: 500px) {
+    .right{
+        display: none;
+    }
     input{
         width: 55vw;
         height: 5vh;     
@@ -840,6 +909,7 @@ button{
        margin-top: 20px
     
     }
+    
     };
 @media (max-width: 700px) {
     .navpart2 a {
