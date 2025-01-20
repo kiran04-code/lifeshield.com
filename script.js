@@ -54,9 +54,7 @@ dropdown2.style.display="block"
      
      
  }
- srcinput.addEventListener("click",function(){
-    dropdown2.style.display="none"
- })
+
 });
 
 function selectOption(value) {
