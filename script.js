@@ -75,7 +75,7 @@ button.addEventListener("click" , function(){
         return true
     }
     if( val == "influenza" ){
-        window.location.href= "influenza.html"
+        window.location.href= "influ.html"
         console.log(val)
         return true
     }
