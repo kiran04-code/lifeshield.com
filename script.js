@@ -36,3 +36,69 @@ function startIncrement2() {
     }, 5);  
 }
 startIncrement2()
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+const srcinput= document.getElementById("input1")
+const dropdown2 =  document.getElementById("dropdown2")
+srcinput.addEventListener("focus" ,function(){
+dropdown2.style.display="block"
+
+})
+
+  dropdown2.addEventListener('click', (event) => {
+   console.log(event.target.closest('.dropdown'))
+ if (!event.target.closest('.dropdown')) {
+     dropdown2.style.display = 'none';
+     
+     
+ }
+ srcinput.addEventListener("click",function(){
+    dropdown2.style.display="none"
+ })
+});
+
+function selectOption(value) {
+ srcinput.value = value;
+ dropdown2.style.display = 'none';
+srcinput.innerHTML=value
+
+}
+
+const button = document.getElementById("button")
+const input1 =  document.getElementById("input1") 
+button.addEventListener("click" , function(){
+    const val = input1.value
+    input1.value=""
+    if( val == "dptw" ){
+        window.location.href= "dptw.html"
+        console.log(val)
+        return true
+    }
+    if( val == "influenza" ){
+        window.location.href= "influenza.html"
+        console.log(val)
+        return true
+    }
+    if( val == "mmr+opr" ){
+        window.location.href= ""
+        console.log(val)
+        return true
+    }
+    if( val == "typhoid" ){
+        window.location.href= "typhoid.html"
+        console.log(val)
+        return true
+    }
+    if( val == "cervical cancer" ){
+        window.location.href= "cervical.html"
+        console.log(val)
+        return true
+    }
+    if( val == "dap/td" ){
+        window.location.href= "td.html"
+        console.log(val)
+        return true
+    }
+})
