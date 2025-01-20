@@ -723,8 +723,10 @@ button{
 @media (max-width: 500px) {
     .dropdown-content{
         margin-top: 65%;
-        margin-right: 30%;
-        width: 50%;
+        margin-right: 15%;
+        width: 65%;
+        height: 65%;
+
         
     }  
     .right{
