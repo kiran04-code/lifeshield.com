@@ -126,6 +126,10 @@
     margin-left: 5%;
     text-decoration: none;
 }
+.hidden a {
+    text-decoration: none;
+    color: #ffffff;
+}
 #hdn2::after{
     content: "";
     height: 0.8px;
@@ -461,11 +465,22 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    </style>
 
    <script>
-    const form = document.querySelector("form")
-   form.addEventListener("sumbit" ,function(e){
-e.preventDefault()
-console.log("it is ok")
-   })
+   const bar = document.getElementById("bar");
+const hiddenMenu = document.getElementById("hidden");
+
+bar.addEventListener("click", function() {
+    // Toggle the display of the hidden menu
+    if (hiddenMenu.style.display === "none" || hiddenMenu.style.display === "") {
+        hiddenMenu.style.display = "flex";
+    } else {
+        hiddenMenu.style.display = "none";
+    }
+});
+
+const login = document.getElementById('login')
+login.addEventListener("click",function(){
+    alert('It is work is prosess')
+})
    </script>
 </body>
 </html>
