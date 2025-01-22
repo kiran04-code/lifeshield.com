@@ -37,17 +37,23 @@ header {
     font-family: 'Futura', sans-serif;
 }
 .winning h5 {
-    font-size: 0.7em;
+    font-size: 0.6em;
     margin-left: 2.1%;
-    text-transform: uppercase;
+    margin-left: 39px;
     font-family: 'Futura', sans-serif;
     color: #ffffff;
+}
+.winning  {
+   height: 25px;
+   width: 200px;
+   display: flex;
 }
 .navpart2 {
     height: 100%;
     width: 60%;
     display: flex;
     gap: 15px;
+    margin-left: 5vw;
     justify-content: center;
     align-items: flex-end;
     padding: 0.7%;
@@ -425,6 +431,11 @@ margin-left: 8vw;
      margin-left: 2vw;
     
 }
+#user-new{
+    font-size: 2vw;
+   position: relative;
+   left: 3vw;
+}
 .img4 img{
     height: 100%;
     width: 100%;
@@ -720,7 +731,23 @@ button{
 #input1::-webkit-appearance{
     display: none;
 }
+.hdnwin{
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    margin-top: 5px;
+    border-radius: 25px;
+    border: 2px solid rgb(251, 0, 38);
+}
 @media (max-width: 500px) {
+
+
+
+    .hdnwin{
+       display: none;
+    }
     .dropdown-content{
         margin-top: 65%;
         margin-right: 15%;
@@ -954,6 +981,16 @@ button{
         width: 35vw;
        margin-top: 20px
     
+    }
+    #user-new{
+        display: none
+    }
+
+    .winning h5 {
+        font-size: 0.4em;
+      position: relative;
+      right: 30px;
+      
     }
     
     };

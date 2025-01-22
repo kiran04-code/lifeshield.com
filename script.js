@@ -100,3 +100,8 @@ button.addEventListener("click" , function(){
         return true
     }
 })
+
+const usernew = document.getElementById('user-new')
+usernew.addEventListener("click",function(){
+    window.location.href="influ.html"
+})

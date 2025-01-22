@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>REGISTER/ SIGN-IN</title>
+</head>
+<body>
+    <header>
+        <div class="navpart1">
+            <div class="life"><h1><i class="fa-solid fa-syringe" style="color: #ffffff;"></i> LifeShield</h1></div>
+            <div class="winning"><h5>winning over disease</h5></div>
+        </div>
+        <div class="navpart2">
+            <a id="hdn2"   href="index.html">HOME</a>
+            <a id="hdn2"   href="#">ABOUT</a>
+            <a id="hdn2"  href="services.html">SERVICES</a>
+            <a href="">FAQ</a>
+            <i  id="user-new" class="fa-solid fa-user" style="color: #ffffff;"></i>
+            <div class="bar">
+                <i id="bar" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+        </div>
+       </header>
+       <div id="hidden" class="hidden">
+        <a id="hdn" href="#">HOME</a>
+        <a id="hdn" href="#">ABOUT</a>
+        <a id="hdn" href="#">SERVICES</a>
+        <a id="hdn" href="#">MY PROFILE</a>
+        <a   id="hdn" href="#">REGISTER/ SIGN-IN</a>
+       </div>
+    <form>
+       <div class="ragsiter-from">
+        <div class="left">
+     <div class="imgm"><img src="file.png" alt=""></div>
+        </div>
+        <div class="right">
+            <h2> LifeShield</h2>
+            <input type="text" placeholder=" Enter the user name">
+            <input type="text"  placeholder=" passward">
+            <input type="text" placeholder=" Enter  WhatsApp number ">
+            <span id="hdn"></span>
+            <input type="number"  title ="Enter age "placeholder=" Enter your Age ">
+            <div class="but"><button type="submit" id="login">LOG-IN</button> <button id="signin">SIGN-IN</button></div>
+        </div>
+       </div>
+    </form>
+    <footer>
+        <div class="fotter">
+            <div class="fot1-1"><h3>VACCINATION SERVICES</h3> <p>Up to date info about vaccine</p>
+                <p>Age based reminders</p>
+                <p>vaccine history</p>
+                <p>slot booking</p></div>
+            <div class="fot1-1"><h3>CONTACTS US</h3> <p>Helpline: +91-11-23978046 (Toll Free - 1075 ) </p>
+                <p>Technical Helpline: 7774025744</p></div>
+            <div class="fot1-1"><img src="Screenshot 2025-01-06 162736.png" alt="">
+                <div class="fot1-1-1"> <a href=""></a><i class="fa-regular fa-envelope" style="color: #ffffff;"></i> 
+                    <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a> 
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-sm" style="color: #ffffff;"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></div></a></div>
+            
+        </div>
+        <div class="fotter2">
+     <div class="fot2-1"><h3>All rights Reserved © LifeShield, 2024 & This Website is Design by Team ASEP</h3></div>
+     <div class="fot2-2"><a href="">Terms of service</a><a href="">privacy policy</a></div>
+        </div>
+    </footer>
+   <style>
+
+    
+    *{
+        margin: 0;
+        padding: 0;
+       box-sizing: border-box;
+
+    }
+    html, body{
+        height: 100%;
+        width: 100%;
+
+    }
+
+    header {
+   width: 100%;
+   height: 60px;
+   background-color: #1e44ac;
+   display: flex;
+}
+
+.navpart1 {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4vw;
+}
+
+.life h1 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: 'Futura', sans-serif;
+}
+.winning h5 {
+    font-size: 0.7em;
+    margin-left: 2.1%;
+    text-transform: uppercase;
+    font-family: 'Futura', sans-serif;
+    color: #ffffff;
+}
+.navpart2 {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    gap: 15px;
+    margin-left: 5vw;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0.7%;
+}
+.navpart2 a {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 1em;
+    color: #ffffff;
+    margin-left: 5%;
+    text-decoration: none;
+}
+#hdn2::after{
+    content: "";
+    height: 0.8px;
+    width: 100%;
+    display: block;
+    background-color: #ffffff;
+    display: block;
+    transform: scale(0);
+    transition: transform 0.5s;
+    transform-origin: right;
+
+}
+#hdn2:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+  
+}
+.bar {
+    height: 50px;
+    width: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.bar i {
+    display: none;
+}
+.hidden {
+    height: 300px;
+    width: 100%;
+    background-color: #1e44ac;
+    display: flex;
+    gap: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none; /* Initially hidden */
+}
+
+.hidden a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+    #hdn{
+    color: red;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.6.5em;
+     margin-right: 150px;
+     display: none;
+     
+    }
+    form{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ragsiter-from{
+        height: 50vh;
+        width: 55vw;
+        display: flex;
+        border: 2px solid blue;
+        border-radius: 15px;
+        box-shadow:  0 0 8px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+    .left{
+        height: 100%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       border-right: 2px solid rgb(255, 0, 0);
+        background-color: rgba(114, 114, 237, 0.105);
+        
+    }
+    .imgm{
+        height: 80%;
+        width: 80%;
+    }
+    .imgm img{
+        height: 100%;
+        width: 100%;
+       object-fit: contain;
+    }
+    .right{
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(114, 114, 237, 0.264);
+        
+    }
+    .right h2{
+       font-family: futura;
+       color: #0022ff;
+       text-transform: capitalize;
+  padding: 0.5vw;
+
+    }
+
+    input{
+        height: 7.5%;
+        width: 80%;
+        border-radius: 5px;
+        border: 2px solid blue;
+        margin-top: 2vw;
+    }
+    .but{
+        height: 10%;
+        width: 60%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    button{
+        height: 100%;
+        width: 40%;
+        background-color: #0022ff;
+        color: #fffcfc;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+
+    footer{
+    height: 65vh;
+    width:100vw;
+    background-color: #1e44ac;
+}
+
+.fotter{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.fot1-1{
+    height: 30%;
+    width: 35vh;
+    margin-top: 10vh;
+
+}
+.fot1-1 h3{
+    /* opacity: 0.5; */
+    color:  #99aff2;
+}
+.fot1-1 p{
+    /* opacity: 0.5; */
+    color:  #ffffff;
+font-size: 0.8rem;
+margin-top: 2vh;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.fot1-1 img{
+    height: 100%;
+    width: 100%;
+    margin-top: 5vh;
+    padding: 2vw;
+    margin-left: 1vw;
+    object-fit: contain;
+}
+.fot1-1-1{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotter2{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+.fot2-1{
+    height: 100%;
+   width: 70%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.fot2-1 h3{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-right: 8vw;
+     font-family: futura;
+}
+.fot2-2{
+    height: 100%;
+   width:30% ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+.fot2-2 a{
+   text-decoration: none;
+   color: #ffffff;
+   font-family: futura;
+   font-size: 0.7rem;
+}
+#user-new{
+        display: none
+    }
+    @media (max-width: 500px) {
+
+        #user-new{
+        display: none
+    }
+        .navpart1 h1, .navpart1 h5{
+        font-size: 3vw;
+    }
+    .navpart2 a {
+        display: none;
+    }
+    .bar i {
+        display: block;
+        position: relative;
+        left: 80px;
+        font-size: 25px;
+        bottom: 12px;
+    }
+    .hidden a {
+        font-size: 2vw;
+    }
+        #hdn{
+   
+    font-size: 0.8em;
+     
+     
+    }
+        input{
+        height: 12%;
+        width: 85%;
+    }
+        .ragsiter-from{
+        height:45vh;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(114, 114, 237, 0.264);
+    }
+    .left{
+       display: none;
+        
+    }
+    .imgm{
+        height: 80%;
+        width: 80%;
+        display: none;
+    }
+    .right{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(114, 114, 237, 0.264);
+        padding: 2vw;
+        
+    }
+
+    .fot1-1 p{
+      margin-left: 4vw;
+    }
+    .fot1-1-1 {
+        padding: 4vw;
+    }
+    .fot1-1 h3{
+        /* opacity: 0.5; */
+        font-size: 0.7rem;
+        margin-left: 2vh;
+        color:  #99aff2;}
+    .fot2-2{
+        gap: 2vh;
+    }
+    .fot2-1 h3{
+        color: #ffffff;
+        font-size: 0.5rem;
+        margin-right: 8vw;
+        padding: 25px;
+         font-family: futura;
+    }
+    .fot2-2 a{
+        text-decoration: none;
+        color: #ffffff;
+        font-family: futura;
+        font-size: 0.4rem;
+     }
+    .navpart1 h1, .navpart1 h5{
+        font-size: 3vw;
+    }
+    .navpart2 a {
+        display: none;
+    }
+    .bar i {
+        display: block;
+        position: relative;
+        left: 80px;
+        font-size: 25px;
+        bottom: 12px;
+    }
+    .hidden a {
+        font-size: 2vw;
+    }
+    footer{
+    height: 52vh;
+    width:100vw;
+    background-color: #1e44ac;
+}
+.fot2-1 h3{
+    color: #ffffff;
+    font-size: 0.5rem;
+    margin-right: 5vw;
+     font-family: futura;
+    padding: 10px
+}
+    }
+   </style>
+
+   <script>
+    const form = document.querySelector("form")
+   form.addEventListener("sumbit" ,function(e){
+e.preventDefault()
+console.log("it is ok")
+   })
+   </script>
+</body>
+</html>
