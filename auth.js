@@ -41,7 +41,9 @@ function login() {
 
     if (user) {
         localStorage.setItem('loggedInUser', JSON.stringify(user));
+        alert('login successfully')
         window.location.href = 'index.html';
+      
     } else {
         alert('Invalid credentials!');
     }
@@ -58,7 +60,7 @@ window.onload = function() {
     const loginLink = document.getElementById('loginLink');
     
     if (loggedInUser) {
-        loginLink.textContent = 'Profile';
+        loginLink.textContent = ' PROFILE';
         loginLink.href = 'profile.html';
     } else {
         loginLink.textContent = 'Login';
