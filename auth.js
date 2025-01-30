@@ -12,6 +12,7 @@ function register() {
     const username = document.getElementById('registerUsername').value;
     const password = document.getElementById('registerPassword').value;
     const mobile = document.getElementById('registerMobile').value;
+    const age = document.getElementById('Age').value;
 
     if (!/^\d{10}$/.test(mobile)) {
         alert('Please enter a valid 10-digit mobile number');
@@ -26,7 +27,7 @@ function register() {
         return;
     }
 
-    users.push({ username, password, mobile });
+    users.push({ username, password, mobile,age });
     localStorage.setItem('users', JSON.stringify(users));
     alert('Registration successful! Please login.');
     showLogin();
