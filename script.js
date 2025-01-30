@@ -3,7 +3,7 @@ const bar = document.getElementById("bar");
 const hiddenMenu = document.getElementById("hidden");
 
 bar.addEventListener("click", function() {
-    // Toggle the display of the hidden menu
+   
     if (hiddenMenu.style.display === "none" || hiddenMenu.style.display === "") {
         hiddenMenu.style.display = "flex";
     } else {
@@ -104,4 +104,13 @@ button.addEventListener("click" , function(){
 const usernew = document.getElementById('user-new')
 usernew.addEventListener("click",function(){
     window.location.href="influ.html"
+})
+var tl = gsap.timeline()
+tl.from("#leftm ,span", {
+  x:1500,
+  delay:1, 
+  duration:2, 
+  opacity:0
+   
+
 })
