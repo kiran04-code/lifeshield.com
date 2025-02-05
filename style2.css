@@ -85,7 +85,21 @@ body {
     /* border-radius: 4px;
     border: none; */
 }
+    .valid1{
+        color: #ff0000;
+        font-family: Teachers;
+        font-size:0.7vw;
+      
 
+    }
+    .valid2{
+        color: #ff0000;
+        font-family: Teachers;
+        font-size:0.7vw;
+      
+        
+
+    }
 .auth-form button {
     background-color: #0800ff;
     color: white;
@@ -151,5 +165,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media (max-width:800px){
+    .valid1{
+       
+        font-size:2vw;
+
+    }
+    .valid2{
+       
+        font-size:2vw;
+
+    }
+}
+@media (max-width:600px){
+    .valid1{
+       font-size:2.1vw;
+
+
+    }
+    .valid2{
+        font-size:2.1vw;
+
+
+    }
 }
 

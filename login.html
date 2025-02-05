@@ -45,14 +45,18 @@
             <button onclick="login()">Login</button>
             <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
         </div>
-
+  <form>
         <div class="auth-form" id="registerForm" style="display: none;">
             <h2>Register</h2>
-            <input type="text" id="registerUsername" placeholder="Username">
-            <input type="password" id="registerPassword" placeholder="Password">
-            <input type="Age" id="Age" placeholder="Age">
-            <input type="tel" id="registerMobile" placeholder="Mobile Number" pattern="[0-9]{10}">
+            <input  type="text" id="registerUsername" placeholder="Username">
+            <span   id="valid"  class="valid1"> </span>
+            <input  type="password" id="registerPassword" placeholder="Password">
+            <span   id="validn"  class="valid2"></span>
+            <input  type="Age" id="Age" placeholder="Age">
+            <span   id="ages"  class="valid2"></span>
+            <input  type="tel" id="registerMobile" placeholder="Mobile Number" pattern="[0-9]{10}">
             <button onclick="register()">Register</button>
+        </form>
             <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a> go to <a href="index.html"> Home</a></p>
         </div>
     </div>
@@ -75,7 +79,7 @@
      <div class="fot2-2"><a href="">Terms of service</a><a href="">privacy policy</a></div>
         </div>
     </footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
     <script src="auth.js"></script>
 </body>
 </html>

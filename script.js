@@ -20,7 +20,7 @@ function startIncrement() {
         if(currentNumber === 3892){
             clearInterval(interval)
         }
-    }, 5);  
+    }, 100);  
 }
 startIncrement()
 let numberElement2 = document.getElementById('num2'); // Get the element to display the number
@@ -33,13 +33,13 @@ function startIncrement2() {
         if(currentNumber2 === 3892){
             clearInterval(interval)
         }
-    }, 5);  
+    }, 100);  
 }
 startIncrement2()
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-});
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('#main'),
+//     smooth: true
+// });
 const srcinput= document.getElementById("input1")
 const dropdown2 =  document.getElementById("dropdown2")
 srcinput.addEventListener("focus" ,function(){
