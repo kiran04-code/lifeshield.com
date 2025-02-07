@@ -99,6 +99,21 @@ button.addEventListener("click" , function(){
         console.log(val)
         return true
     }
+    if( val == "Rotavirusvaccine" ){
+        window.location.href= "Rotavirusvaccine .html"
+        console.log(val)
+        return true
+    }
+    if( val == "Haemophilus" ){
+        window.location.href= "Haemophilus.html"
+        console.log(val)
+        return true
+    }
+    if( val == "Pneumococcal" ){
+        window.location.href= "Pneumococcal.html"
+        console.log(val)
+        return true
+    }
 })
 
 const usernew = document.getElementById('user-new')
