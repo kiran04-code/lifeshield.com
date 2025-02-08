@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-    <title>Rotavirus Vaccine</title>
+    <title>Varicella Vaccine</title>
 </head>
 <body onload="myfunction()">
     <div id="loding"></div>
@@ -34,53 +34,48 @@
         <a id="hdn" href="register.html">REGISTER/ SIGN-IN</a>
     </div>
     <div class="agegrp">
-        <h1>Pneumococcal Vaccine</h1>
+        <h1>Varicella Vaccine (Chickenpox)</h1>
         <h2>Age Group:</h2>
-        <p>The pneumococcal vaccine is primarily given to infants and young children, but it is also recommended for older adults and people with certain medical conditions. The vaccination schedule for infants typically starts at 2 months of age. It is also recommended for adults over 65 years old, and for individuals with certain conditions (such as a weakened immune system, chronic heart or lung disease, or other risk factors).</p>
-    </div>
-    
-    <div class="bnft">
-        <h2>Benefits of Taking the Doses:</h2>
+        <p>The Varicella vaccine is typically administered as follows:</p>
         <ul>
-            <li><strong>Prevention of life-threatening diseases:</strong> Particularly pneumonia and meningitis, which can be caused by pneumococcal bacteria.</li>
-            <li><strong>Reduction in hospitalizations:</strong> Helps reduce hospitalizations due to pneumococcal infections, especially in vulnerable groups like young children and the elderly.</li>
-            <li><strong>Community protection:</strong> Decreases the transmission of pneumococcal bacteria to others, especially for those who are more susceptible to infection, such as those with weakened immune systems.</li>
+            <li><strong>Children:</strong> First dose at 12-15 months, second dose at 4-6 years.</li>
+            <li><strong>Older Children & Adults (if not previously vaccinated):</strong> Two doses, at least 4-8 weeks apart.</li>
+            <li><strong>People 13 years or older:</strong> 2 doses (0.5 ml each) of the single-antigen varicella vaccine subcutaneously, 4-8 weeks apart.</li>
+            <li><strong>Note:</strong> MMRV vaccine is not approved for people in this age group.</li>
         </ul>
     </div>
-    
+
+    <div class="bnft">
+        <h2>Benefits:</h2>
+        <ul>
+            <li><strong>Prevents infection with chickenpox (varicella):</strong> A severe skin infection that can lead to complications such as pneumonia and brain inflammation.</li>
+            <li><strong>Prevents later-life complications:</strong> Reduces the risk of developing shingles later in life.</li>
+            <li><strong>Reduces the risk of hospitalization and severe disease:</strong> Helps prevent serious complications from varicella infection.</li>
+            <li><strong>Prevents the spread of the virus within the community:</strong> Helps control the spread of varicella infections.</li>
+        </ul>
+    </div>
+
     <div class="page2">
         <h2>Number of Doses:</h2>
-        <p>The pneumococcal vaccine is typically given as a series of doses for infants and children, while adults and at-risk individuals may receive a single dose or a series of booster doses. The typical vaccination schedule is as follows:</p>
+        <p>The Varicella vaccine is typically given as follows:</p>
         <ul>
-            <li><strong>Pneumococcal Conjugate Vaccine (PCV13):</strong> This is the primary vaccine used in infants and children. It is given in a series of 4 doses:
-                <ul>
-                    <li>First dose: 2 months of age.</li>
-                    <li>Second dose: 4 months of age.</li>
-                    <li>Third dose: 6 months of age.</li>
-                    <li>Fourth dose: 12-15 months of age.</li>
-                </ul>
-            </li>
+            <li><strong>Children:</strong> 2 doses, one at 12–15 months and another at 4–6 years of age.</li>
+            <li><strong>Older kids, teens, and adults without immunity:</strong> 2 doses, 4–8 weeks apart.</li>
+            <li><strong>Special Cases:</strong> Healthcare professionals, teachers, and other high-risk employees need two doses if they're not immune.</li>
+            <li><strong>Pregnant women:</strong> Should wait until after childbirth to get the vaccine, if necessary.</li>
         </ul>
     </div>
-    
+
     <div class="page3">
         <h2>Side Effects:</h2>
-        <p>The pneumococcal vaccine is generally safe and well-tolerated, but, like all vaccines, it may cause some mild side effects. Common side effects include:</p>
+        <p>The Varicella vaccine is generally safe, but like all vaccines, it may cause some side effects:</p>
         <ul>
-            <li>Pain, redness, or swelling at the injection site (usually in the arm or thigh).</li>
-            <li>Fever (low-grade).</li>
-            <li>Irritability or fussiness (especially in children).</li>
-            <li>Tiredness or mild fatigue.</li>
-            <li>Loss of appetite.</li>
-        </ul>
-        <p>In rare cases, more serious side effects can occur, such as:</p>
-        <ul>
-            <li><strong>Allergic reactions:</strong> Including swelling, hives, or difficulty breathing (though this is extremely rare).</li>
-            <li><strong>Severe fever or rash.</strong></li>
-            <li><strong>Unusual tiredness or weakness.</strong></li>
+            <li><strong>Mild:</strong> Redness, small bumps, pain at the injection site, and mild fever.</li>
+            <li><strong>Moderate:</strong> Temporary joint pain and swollen lymph nodes.</li>
+            <li><strong>Serious but unlikely:</strong> Severe allergic reactions, pneumonia, or low platelets.</li>
         </ul>
     </div>
-    
+
     <footer>
         <div class="fotter">
             <div class="fot1-1"><h3>VACCINATION SERVICES</h3> 
@@ -118,6 +113,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
 #loding{
     position: fixed;
     width: 100%;
@@ -126,11 +126,6 @@
    background: #ffffff
    url("new.gif") no-repeat center;
   }
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
 header {
    width: 100%;
    height: 60px;
@@ -244,6 +239,8 @@ header {
 .agegrp h2{
     position: relative;
     top: 2vw;
+    font-family: Teachers;
+    color: #011fff;
     font-size: 1.5vw;
     padding: 2vw;
     position: relative;
@@ -263,6 +260,8 @@ header {
 .bnft h2{
     position: relative;
     top: 2vw;
+    font-family: Teachers;
+    color: #011fff;
     font-size: 1.5vw;
     padding: 2vw;
 }
@@ -273,8 +272,13 @@ header {
    margin-left: 2vw;
 }
 .bnft ul li{
-    padding: 0.2vw;
-    margin-left: 5vw;
+    padding: 0.1vw;
+    margin-left: 7vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.agegrp ul li{
+    padding: 0.1vw;
+    margin-left: 7vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .page2{
@@ -298,7 +302,8 @@ header {
 footer{
     height: 65vh;
     width:100vw;
-   margin-top: 5%;
+    position: relative;
+    bottom: 40%;
     background-color: #1e44ac;
 }
 
@@ -384,6 +389,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 .page2 h2{
     position: relative;
     top: 2vw;
+    font-family: Teachers;
+    color: #011fff;
     font-size: 1.5vw;
     padding: 2vw;
 } 
@@ -395,10 +402,14 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 .page3{
     height: 45vh;
     width: 100%;
+   position: relative;
+   bottom: 22%;
 } 
 .page3 h2{
     position: relative;
     top: 2vw;
+    font-family: Teachers;
+    color: #011fff;
     font-size: 1.5vw;
     padding: 2vw;
 } 
@@ -408,7 +419,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
 @media (max-width: 1100px) {
-   
+   .page2{
+    position: relative;
+    bottom:20%;
+   }
 .page2 h2{
    font-size: 4vw;
    margin-top: 33vh;
@@ -463,7 +477,6 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     footer{
     height: 52vh;
     width:100vw;
-    margin-top: 15vh;
     background-color: #1e44ac;
 }
 .fot2-1 h3{

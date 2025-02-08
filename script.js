@@ -114,6 +114,21 @@ button.addEventListener("click" , function(){
         console.log(val)
         return true
     }
+    if( val == "Rubella" ){
+        window.location.href= "Rubella.html"
+        console.log(val)
+        return true
+    }
+    if( val == "Varicella" ){
+        window.location.href= "Varicella.html"
+        console.log(val)
+        return true
+    }
+    if( val == "MMR" ){
+        window.location.href= "MMR.html"
+        console.log(val)
+        return true
+    }
 })
 
 const usernew = document.getElementById('user-new')
@@ -129,3 +144,10 @@ tl.from("#leftm ,span", {
    
 
 })
+//====================================================================================================
+    //    var loader = document.getElementById("loding");
+    //    console.log(loader)
+    //    function myfunction(){
+    //     loader.style.display = 'none';
+    //    }
+// });

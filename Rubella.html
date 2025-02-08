@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-    <title>Rotavirus Vaccine</title>
+    <title>Rubella Vaccine</title>
 </head>
 <body onload="myfunction()">
     <div id="loding"></div>
@@ -34,53 +34,45 @@
         <a id="hdn" href="register.html">REGISTER/ SIGN-IN</a>
     </div>
     <div class="agegrp">
-        <h1>Pneumococcal Vaccine</h1>
+        <h1>Rotavirus Vaccine</h1>
         <h2>Age Group:</h2>
-        <p>The pneumococcal vaccine is primarily given to infants and young children, but it is also recommended for older adults and people with certain medical conditions. The vaccination schedule for infants typically starts at 2 months of age. It is also recommended for adults over 65 years old, and for individuals with certain conditions (such as a weakened immune system, chronic heart or lung disease, or other risk factors).</p>
+        <p>The Rotavirus vaccine is typically given to infants starting at 2 months of age. It is recommended as part of routine immunizations for babies to protect them from rotavirus infections, which can cause severe gastroenteritis (diarrhea and vomiting). The vaccine may be administered up to 8 months of age, depending on the specific vaccine brand and local immunization schedules.</p>
     </div>
-    
+
     <div class="bnft">
-        <h2>Benefits of Taking the Doses:</h2>
+        <h2>Benefits:</h2>
         <ul>
-            <li><strong>Prevention of life-threatening diseases:</strong> Particularly pneumonia and meningitis, which can be caused by pneumococcal bacteria.</li>
-            <li><strong>Reduction in hospitalizations:</strong> Helps reduce hospitalizations due to pneumococcal infections, especially in vulnerable groups like young children and the elderly.</li>
-            <li><strong>Community protection:</strong> Decreases the transmission of pneumococcal bacteria to others, especially for those who are more susceptible to infection, such as those with weakened immune systems.</li>
+            <li><strong>Prevention of severe diarrhea and vomiting:</strong> Protects against rotavirus infections that cause these symptoms in infants and children.</li>
+            <li><strong>Reduces the risk of hospitalization:</strong> Helps reduce the need for hospitalization due to rotavirus gastroenteritis, a common cause of severe dehydration in young children.</li>
+            <li><strong>Prevention of dehydration:</strong> Prevents dehydration from prolonged diarrhea and vomiting, which can be life-threatening if not treated.</li>
+            <li><strong>Prevention of death:</strong> In rare, severe cases, the vaccine helps prevent death from severe rotavirus-related dehydration.</li>
         </ul>
     </div>
-    
+
     <div class="page2">
         <h2>Number of Doses:</h2>
-        <p>The pneumococcal vaccine is typically given as a series of doses for infants and children, while adults and at-risk individuals may receive a single dose or a series of booster doses. The typical vaccination schedule is as follows:</p>
+        <p>The Rotavirus vaccine is typically given in a two or three-dose series depending on the specific vaccine used. The most common vaccines include:</p>
         <ul>
-            <li><strong>Pneumococcal Conjugate Vaccine (PCV13):</strong> This is the primary vaccine used in infants and children. It is given in a series of 4 doses:
-                <ul>
-                    <li>First dose: 2 months of age.</li>
-                    <li>Second dose: 4 months of age.</li>
-                    <li>Third dose: 6 months of age.</li>
-                    <li>Fourth dose: 12-15 months of age.</li>
-                </ul>
-            </li>
+            <li><strong>RotaTeq (RV5):</strong> A three-dose series, given at 2 months, 4 months, and 6 months of age.</li>
+            <li><strong>Rotarix (RV1):</strong> A two-dose series, given at 2 months and 4 months of age.</li>
         </ul>
     </div>
-    
+
     <div class="page3">
         <h2>Side Effects:</h2>
-        <p>The pneumococcal vaccine is generally safe and well-tolerated, but, like all vaccines, it may cause some mild side effects. Common side effects include:</p>
+        <p>The Rotavirus vaccine is generally safe and well-tolerated, but like all vaccines, it may cause some mild side effects:</p>
         <ul>
-            <li>Pain, redness, or swelling at the injection site (usually in the arm or thigh).</li>
-            <li>Fever (low-grade).</li>
-            <li>Irritability or fussiness (especially in children).</li>
-            <li>Tiredness or mild fatigue.</li>
+            <li>Fussiness or irritability in infants.</li>
+            <li>Mild diarrhea or vomiting after vaccination.</li>
+            <li>Low-grade fever.</li>
             <li>Loss of appetite.</li>
         </ul>
-        <p>In rare cases, more serious side effects can occur, such as:</p>
+        <p>In rare cases, more serious side effects may occur, such as:</p>
         <ul>
-            <li><strong>Allergic reactions:</strong> Including swelling, hives, or difficulty breathing (though this is extremely rare).</li>
-            <li><strong>Severe fever or rash.</strong></li>
-            <li><strong>Unusual tiredness or weakness.</strong></li>
+            <li>Intussusception (a rare condition where the intestines fold into themselves, which can cause a blockage). However, the risk of intussusception is very low and is outweighed by the benefits of the vaccine in preventing severe rotavirus infection.</li>
+            <li>Severe allergic reactions, such as difficulty breathing or swelling, though these are extremely rare.</li>
         </ul>
     </div>
-    
     <footer>
         <div class="fotter">
             <div class="fot1-1"><h3>VACCINATION SERVICES</h3> 
@@ -118,6 +110,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
 #loding{
     position: fixed;
     width: 100%;
@@ -126,11 +123,6 @@
    background: #ffffff
    url("new.gif") no-repeat center;
   }
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
 header {
    width: 100%;
    height: 60px;
@@ -244,6 +236,8 @@ header {
 .agegrp h2{
     position: relative;
     top: 2vw;
+    font-family: Teachers;
+    color: #011fff;
     font-size: 1.5vw;
     padding: 2vw;
     position: relative;
@@ -258,11 +252,13 @@ header {
 .bnft{
     height: 22vh;
     width: 100vw;
-   margin-top: 20vh;
+   margin-top: 15vh;
 }
 .bnft h2{
     position: relative;
     top: 2vw;
+    font-family: Teachers;
+    color: #011fff;
     font-size: 1.5vw;
     padding: 2vw;
 }
@@ -273,8 +269,8 @@ header {
    margin-left: 2vw;
 }
 .bnft ul li{
-    padding: 0.2vw;
-    margin-left: 5vw;
+    padding: 0.1vw;
+    margin-left: 7vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .page2{
@@ -298,7 +294,8 @@ header {
 footer{
     height: 65vh;
     width:100vw;
-   margin-top: 5%;
+    position: relative;
+    bottom: 10%;
     background-color: #1e44ac;
 }
 
@@ -384,6 +381,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 .page2 h2{
     position: relative;
     top: 2vw;
+    font-family: Teachers;
+    color: #011fff;
     font-size: 1.5vw;
     padding: 2vw;
 } 
@@ -395,10 +394,14 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 .page3{
     height: 45vh;
     width: 100%;
+   position: relative;
+   bottom: 22%;
 } 
 .page3 h2{
     position: relative;
     top: 2vw;
+    font-family: Teachers;
+    color: #011fff;
     font-size: 1.5vw;
     padding: 2vw;
 } 
@@ -408,7 +411,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
 @media (max-width: 1100px) {
-   
+   .page2{
+    position: relative;
+    bottom:20%;
+   }
 .page2 h2{
    font-size: 4vw;
    margin-top: 33vh;
@@ -463,7 +469,6 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     footer{
     height: 52vh;
     width:100vw;
-    margin-top: 15vh;
     background-color: #1e44ac;
 }
 .fot2-1 h3{

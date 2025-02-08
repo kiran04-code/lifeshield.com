@@ -7,8 +7,8 @@
 </head>
     <title>typhoid</title>
 </head>
-<body>
-
+<body onload="myfunction()">
+    <div id="loding"></div>
     <header>
         <div class="navpart1">
             <div class="life"><h1><i class="fa-solid fa-syringe" style="color: #ffffff;"></i> LifeShield</h1></div>
@@ -114,7 +114,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+#loding{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    height: 100vh;
+   background: #ffffff
+   url("new.gif") no-repeat center;
+  }
 html, body {
     height: 100%;
     width: 100%;
@@ -478,6 +485,16 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     };
  
     </style>
+     <script>
+        var loader = document.getElementById("loding");
+  console.log(loader)
+  function myfunction(){
+   setTimeout(function(){
+       loader.style.display = 'none';
+   },2000)
+  
+  }
+</script>
      <script src="script.js"></script>
 </body>
 </html>

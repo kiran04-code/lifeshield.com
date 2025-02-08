@@ -759,13 +759,16 @@ right: 20px;
     .right{
         display: none;
     }
-    input{
-        width: 55vw;
-        height: 5vh;     
+    #input1{
+        height: 4vh;
+        width:55vw;
+
+        
     }
-    button{
-       width:18vw;
-       height: 5vh; 
+    #button{
+        height: 4vh;
+        width:15vw;
+       
     }
     .jsdy2 h1{
       background-color: #0044ff;
