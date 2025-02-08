@@ -129,6 +129,16 @@ button.addEventListener("click" , function(){
         console.log(val)
         return true
     }
+    if( val == "BCG Vaccine" ){
+        window.location.href= "BCG.html"
+        console.log(val)
+        return true
+    }
+    if( val == "OPV" ){
+        window.location.href= "OPV.html"
+        console.log(val)
+        return true
+    }
 })
 
 const usernew = document.getElementById('user-new')

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="abt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    <title>dptw</title>
+</head>
+<body onload="myfunction()">
+    <div id="loding"></div>
+    <header>
+        <div class="navpart1">
+            <div class="life"><h1><i class="fa-solid fa-syringe" style="color: #ffffff;"></i> LifeShield</h1></div>
+            <div class="winning"><h5>winning over disease</h5></div>
+        </div>
+        <div class="navpart2">
+            <a id="hdn2"   href="index.html">HOME</a>
+            <a id="hdn2"   href="#">ABOUT</a>
+            <a id="hdn2"  href="services.html">SERVICES</a>
+            <a id="hdn2"  href="#">MY PROFILE</a>
+            <a  id="hdn2"   href="register.html">REGISTER/ SIGN-IN</a>
+            <div class="bar">
+                <i id="bar" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+        </div>
+       </header>
+       <div id="hidden" class="hidden">
+        <a id="hdn" href="index.html">HOME</a>
+        <a id="hdn" href="#">ABOUT</a>
+        <a id="hdn" href="services.html">SERVICES</a>
+        <a id="hdn" href="#">MY PROFILE</a>
+        <a id="hdn" href="register.html">REGISTER/ SIGN-IN</a>
+       </div>
+       <div class="main-content">
+        <section>
+            <h2    style="color: blue; font-family: Teachers;" >About</h2>
+            <p>Vaccination is one of the best methods to stop the spread of infectious diseases. However, keeping track of vaccination schedules can be tough due to missed doses, 
+                incomplete records, and lack of reminders. This platform is designed to assist individuals and families in managing their vaccination schedules and providing timely reminders for upcoming doses.</p>
+            <p>The goal of this project is to allow users to register and manage their vaccination records, alert them about upcoming or overdue vaccinations via email or SMS,
+                 and display nearby vaccination centers. This initiative will increase awareness about the importance of various vaccines and emerging diseases, contributing to better public health outcomes.</p>
+        </section>
+
+        <section>
+            <p>Our vaccination management system offers a range of features to ensure a seamless and informed immunization experience. 
+                With Vaccination Reminders, users receive timely alerts about upcoming doses, preventing missed vaccinations and ensuring complete immunization. 
+                The Vaccination History Tracking feature allows users to store and manage their vaccination records digitally, making it easy to access and stay organized. Additionally, the 
+                Nearby Vaccination Centers feature enables users to find and book appointments at convenient locations using a location-based search. To support informed decision-making, our system provides 
+                Reliable Vaccine Information, offering detailed insights about various vaccines, their benefits, and recommended schedules.</p>
+        </section>
+    </div>
+    <footer>
+        <div class="fotter">
+            <div class="fot1-1"><h3>VACCINATION SERVICES</h3> <p>Up to date info about vaccine</p>
+                <p>Age based reminders</p>
+                <p>vaccine history</p>
+                <p>slot booking</p></div>
+            <div class="fot1-1"><h3>CONTACTS US</h3> <p>Helpline: +91-11-23978046 (Toll Free - 1075 ) </p>
+                <p>Technical Helpline: 7774025744</p></div>
+            <div class="fot1-1"><img src="Screenshot 2025-01-06 162736.png" alt="">
+                <div class="fot1-1-1"> <a href=""></a><i class="fa-regular fa-envelope" style="color: #ffffff;"></i> 
+                    <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a> 
+                    <a href=""><i class="fa-brands fa-instagram fa-sm" style="color: #ffffff;"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></div></a></div>
+        </div>
+        <div class="fotter2">
+     <div class="fot2-1"><h3>All rights Reserved © LifeShield, 2024 & This Website is Design by Team ASEP</h3></div>
+     <div class="fot2-2"><a href="">Terms of service</a><a href="">privacy policy</a></div>
+        </div>
+    </footer>
+    <script>
+        var loader = document.getElementById("loding");
+  console.log(loader)
+  function myfunction(){
+   setTimeout(function(){
+       loader.style.display = 'none';
+   },2000)
+  
+  }
+</script>
+     <script src="script.js"></script>
+</body>
+</html>
