@@ -1,3 +1,4 @@
+
 function showRegister() {
     document.getElementById('loginForm').style.display = 'none';
     document.getElementById('registerForm').style.display = 'block';
@@ -14,7 +15,6 @@ function register() {
     const mobile = document.getElementById('registerMobile').value;
     const age = document.getElementById('Age').value;
     const ages = document.getElementById('ages')
-
     const span2 = document.getElementById('validn'); // Error span for password validation
     const span3 = document.getElementById('valid'); // Separate span for username validation
     
@@ -83,17 +83,17 @@ function login() {
     const user = users.find(user => user.username === username && user.password === password);
 
     if (user) {
-        localStorage.setItem('loggedInUser', JSON.stringify(user));
+        localStorage.setItem('loggedInUser', JSON.stringify(user)); // Save logged-in user
+        console.log("Logged In User saved to localStorage:", user); // Debug log
         alert('Login successfully');
-        window.location.href = 'index.html';
+        window.location.href = 'index.html'; // Redirect to another page
     } else {
         alert('Invalid credentials!');
     }
 }
-
 function logout() {
     localStorage.removeItem('loggedInUser');
-    window.location.href = 'login.html';
+    window.location.href = 'loginsyt.html';
 }
 
 // Check login status on index page load
@@ -102,10 +102,10 @@ window.onload = function() {
     const loginLink = document.getElementById('loginLink');
 
     if (loggedInUser) {
-        loginLink.textContent = ' PROFILE';
+        loginLink.textContent = 'PROFILE';
         loginLink.href = 'profile.html';
     } else {
-        loginLink.textContent = 'Login';
-        loginLink.href = 'login.html';
+        loginLink.textContent = 'LOGIN';
+        loginLink.href = 'http://localhost:3001/';
     }
 };

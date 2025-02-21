@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main id="main">
+        <header>
+         <div class="navpart1">
+             <div class="life"><h1><i class="fa-solid fa-syringe" style="color: #ffffff;"></i> LifeShield</h1></div>
+             <div class="winning"><h5>winning over disease</h5></div>
+         </div>
+         <div class="navpart2">
+             <a id="hdn2"   href="http://127.0.0.1:3000/index.html">HOME</a>
+             <a id="hdn2"   href="#">ABOUT</a>
+             <a id="hdn2"  href="services.html">SERVICES</a>
+             <a id="hdn2"  href="#">FAQ</a>
+             <div class="nav-links">
+                 <a href="#" id="loginLink">REGISTER</a>
+             </div>
+             <!-- <i  id="user-new" class="fa-solid fa-user" style="color: #ffffff;"></i> -->
+             <div class="bar">
+                 <i id="bar" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+             </div>
+         </div>
+        </header>
+        <div id="hidden" class="hidden">
+         <a id="hdn" href="index.html">HOME</a>
+         <a id="hdn" href="#">ABOUT</a>
+         <a id="hdn" href="services.html">SERVICES</a>
+         <a id="hdn" href="">MY PROFILE</a>
+         <a   id="hdn" href="http://localhost:3001/">REGISTER/ SIGN-IN</a>
+        </div>
+        <div class="map2"><input type="text" placeholder="search your location" id="autocomplete"></div>
+        
+         <div id="map" class="map"></div>
+        <footer>
+            <div class="fotter">
+                <div class="fot1-1"><h3>VACCINATION SERVICES</h3> <p>Up to date info about vaccine</p>
+                    <p>Age based reminders</p>
+                    <p>vaccine history</p>
+                    <p>slot booking</p></div>
+                <div class="fot1-1"><h3>CONTACTS US</h3> <p>Helpline: +91-11-23978046 (Toll Free - 1075 ) </p>
+                    <p>Technical Helpline: 7774025744</p></div>
+                <div class="fot1-1"><img src="Screenshot 2025-01-06 162736.png" alt="">
+                    <div class="fot1-1-1"> <a href=""></a><i class="fa-regular fa-envelope" style="color: #ffffff;"></i> 
+                        <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a> 
+                        <a href=""><i class="fa-brands fa-instagram fa-sm" style="color: #ffffff;"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></div></a></div>
+            </div>
+            <div class="fotter2">
+         <div class="fot2-1"><h3>All rights Reserved © LifeShield, 2024 & This Website is Design by Team ASEP</h3></div>
+         <div class="fot2-2"><a href="">Terms of service</a><a href="">privacy policy</a></div>
+            </div>
+        </footer>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTn_A_npaQVDGzCyt_VnzFa10sxufmoU&libraries=places"></script>
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+             input{
+              height: 40px;
+                width: 40%;
+                border-radius: 8px;
+                border: 2px solid black;
+                background-color: #f2f2f2;
+                margin-top: 4%;
+                outline: none;
+                margin-bottom: 2%;
+                padding-left: 20px;
+            }
+            .map{
+                height: 800px;
+                width: 100%;
+               
+            }
+            .map2{
+        
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+</body>
+<script>
+   var map;
+    var service;
+    var infowindow;
+    function initialize(){
+       var pyrmont = new google.maps.LatLng(28.6139, 77.2090);
+       map = new google.maps.Map(document.getElementById('map'), {
+           center: pyrmont,
+           zoom: 15
+       });
+       var input = document.getElementById('autocomplete');
+       var autocomplete = new google.maps.places.Autocomplete(input);
+       autocomplete.bindTo('bounds', map);
+       var market = new google.maps.Marker({
+           map: map,
+          
+       });
+       google.maps.event.addListener(autocomplete, 'place_changed', function(){
+          var place = autocomplete.getPlace();
+          console.log(place);
+          if(place.geometry.viewport){
+              map.fitBounds(place.geometry.viewport)
+          }
+          else{
+              map.setCenter(place.geometry.location);
+              map.setZoom(17);
+          }
+       });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</html>

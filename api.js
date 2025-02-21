@@ -1,19 +1,33 @@
 const axios = require("axios");
-// const kk = document.getElementById("registerMobile").value;
-// console.log(kk)
-const apiKey = "Xz3IefYDUcy1Jm84NwK5s6SEGTVqhguW0i9oAb72LRZPkpCjOFQrs0uq9DMSCy7R25ctzVJbHjpI1hZf";
-const phoneNumber ='7774025744'; 
-const message = "Welcome to LifeShield.com! Your registration was successful, and you're ready to explore our vaccination services.";
 
+const apiKey = "SqTcMgA3BGuF4dJZ97ra6E1CUL8YwXRtkzQKN2lo0ivhxDWnVHvbc7wRVgnU6AtEXH9s2lNQkp4ZLmWI";
+function getAgeMessage(age) {
+    let message = `Your registration was successful.`;
+  
+    // Custom messages based on age groups
+    if (age >= 1 && age <= 5) {
+      message += ` Since you're ${age} years old, you're in the early childhood stage. Make sure to follow the vaccination schedule.`;
+    } else if (age >= 6 && age <= 10) {
+      message += ` Since you're ${age} years old, you're a child. It's important to get your childhood vaccines like MMR and DTP.`;
+    } else if (age >= 11 && age <= 16) {
+      message += ` Since you're ${age} years old, you're a teenager. Don't forget to get your HPV and flu vaccines.`;
+    } else {
+      message += ` Since you're ${age} years old, please consult your doctor for any age-specific vaccine recommendations.`;
+    }
+  
+    return message;
+  }
+  
 // Create the SMS data
 const smsData = {
-  sender_id: "LIFESHIELD",
+  sender_id: "FSTSMS",
   language: "english",
   route: "q",
   numbers: phoneNumber,
-  message: message
+  message: getAgeMessage(age)
 };
 
+// Send the SMS
 axios
   .post("https://www.fast2sms.com/dev/bulkV2", smsData, {
     headers: {
