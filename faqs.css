@@ -1,0 +1,124 @@
+body {
+    font-family: "Teachers", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    color: #000000;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.heading {
+  background-color: #1e44ac;
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+}
+
+address h1 {
+    font-size: 1rem;
+}
+
+address p {
+    font-size: 1rem;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 35px;
+    background: #f3efeffa;
+    padding: 18px;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: blue;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.faq-question {
+    font-size: 1rem;
+    color: #050505;
+    cursor: pointer;
+    padding: 15px;
+    background:  #1e44ac99;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    font-size: 1rem;
+    background: #e8e4e4;
+    border-radius: 4px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    address h1 {
+        font-size: 1rem;
+    }
+
+    address p {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 8px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+
+   
+}
+
+@media screen and (max-width: 768px) {
+    address h1 {
+        font-size: 1rem;
+    }
+
+    address p {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine History</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+       #hev{
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-family: futura;
+          color: #0000ff;
+          
+       }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 45px;
+            border: 2px solid blue;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input, select, button {
+            width:92%;
+            padding: 10px;
+            margin: 10px 5px;   
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: rgb(7, 7, 90);
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: rgb(5, 0, 100);
+        }
+        .history-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        .history-table th, .history-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .history-table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .history-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .delete-btn {
+            background: red;
+            color: white;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navpart1">
+            <div class="life"><h1><i class="fa-solid fa-syringe" style="color: #ffffff;"></i> LifeShield</h1></div>
+            <div class="winning"><h5>winning over disease</h5></div>
+        </div>
+        <div class="navpart2">
+            <a id="hdn2" href="index.html">HOME</a>
+            <a id="hdn2" href="#">ABOUT</a>
+            <a id="hdn2" href="services.html">SERVICES</a>
+            <a id="hdn2" href="#">MY PROFILE</a>
+            <a id="hdn2" href="register.html">REGISTER/ SIGN-IN</a>
+            <div class="bar">
+                <i id="bar" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </header>
+    
+    <div id="hidden" class="hidden">
+        <a id="hdn" href="index.html">HOME</a>
+        <a id="hdn" href="#">ABOUT</a>
+        <a id="hdn" href="services.html">SERVICES</a>
+        <a id="hdn" href="#">MY PROFILE</a>
+        <a id="hdn" href="register.html">REGISTER/ SIGN-IN</a>
+    </div>
+    <h2 id="hev">Vaccine History</h2>
+    
+    <div class="container">
+        <label for="age">Select Age:</label>
+        <select id="age" onchange="updateVaccineList()">
+            <option value="" disabled selected>Choose Age</option>
+            <script>
+                  for (let i = 1; i <= 24; i++) {
+                    document.write(`<option value="${i}M">${i} months</option>`);
+                }
+                for (let i = 3; i <= 16; i++) {
+                    document.write(`<option value="${i}Y">${i} years</option>`);
+                }
+            </script>
+        </select>
+
+        <label for="vaccineName">Select Vaccine:</label>
+        <select id="vaccineName">
+            <option value="" disabled selected> Select Age First</option>
+        </select>
+
+        <label for="vaccineDate">Date Given:</label>
+        <input type="date" id="vaccineDate">
+
+        <label for="doseNumber">Dose Number:</label>
+        <input type="number" id="doseNumber" min="1" placeholder="Enter dose number">
+
+        <button onclick="addVaccine()">Add Record</button>
+        <button onclick="downloadPDF()" style="background-color: rgb(16, 5, 112);">Download PDF</button>
+
+        <h3>Vaccination History</h3>
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Age</th>
+                    <th>Vaccine</th>
+                    <th>Date</th>
+                    <th>Dose</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="historyList"></tbody>
+        </table>
+    </div>
+ 
+    <footer>
+        <div class="fotter">
+            <div class="fot1-1"><h3>VACCINATION SERVICES</h3> 
+                <p>Up to date info about vaccine</p>
+                <p>Age-based reminders</p>
+                <p>Vaccine history</p>
+                <p>Slot booking</p>
+            </div>
+            <div class="fot1-1"><h3>CONTACT US</h3>
+                <p>Helpline: +91-11-23978046 (Toll Free - 1075)</p>
+                <p>Technical Helpline: 7774025744</p>
+            </div>
+            <div class="fot1-1">
+                <img src="Screenshot 2025-01-06 162736.png" alt="">
+                <div class="fot1-1-1">
+                    <a href=""><i class="fa-regular fa-envelope" style="color: #ffffff;"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram fa-sm" style="color: #ffffff;"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="fotter2">
+            <div class="fot2-1"><h3>All rights Reserved © LifeShield, 2024 & This Website is Designed by Team ASEP</h3></div>
+            <div class="fot2-2">
+                <a href="">Terms of Service</a>
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+   const vaccineData = {
+    "1M": ["Hepatitis B", "BCG"],
+    "2M": ["DTP", "Polio", "Hib"],
+    "3M": ["Rotavirus", "Pneumococcal"],
+    "4M": ["DTP", "Hib", "Polio"],
+    "5M": ["Rotavirus", "Pneumococcal"],
+    "6M": ["Hepatitis B", "DTP", "Polio", "Influenza"],
+    "7M": ["Rotavirus"],
+    "8M": ["Pneumococcal"],
+    "9M": ["Measles", "Mumps", "Rubella"],
+    "10M": ["Typhoid"],
+    "11M": ["Influenza"],
+    "12M": ["Hepatitis A", "Chickenpox", "MMR Booster"],
+    "13M": ["DTP Booster", "Polio Booster"],
+    "14M": ["Typhoid"],
+    "15M": ["DTP Booster", "Polio Booster", "Hepatitis B"],
+    "16M": ["Influenza"],
+    "17M": ["Typhoid Booster"],
+    "18M": ["Hepatitis A Booster"],
+    "19M": ["Polio Booster"],
+    "20M": ["DTP Booster"],
+    "21M": ["Influenza"],
+    "22M": ["Typhoid"],
+    "23M": ["Hepatitis A"],
+    "24M": ["DTP Booster", "Polio Booster"],
+    "3Y": ["MMR Booster", "Typhoid Booster"],
+    "4Y": ["DTP", "Polio", "Influenza"],
+    "5Y": ["Hepatitis B", "Typhoid"],
+    "6Y": ["DTP Booster", "Polio Booster", "Hepatitis A"],
+    "7Y": ["Influenza", "Meningococcal Vaccine"],
+    "8Y": ["Flu Shot", "Polio Booster"],
+    "9Y": ["HPV Vaccine", "Meningococcal Vaccine"],
+    "10Y": ["DTP Booster", "Hepatitis B Booster"],
+    "11Y": ["HPV Vaccine", "Tdap"],
+    "12Y": ["Flu Shot", "MMR Booster"],
+    "13Y": ["HPV Booster", "Hepatitis A"],
+    "14Y": ["Meningococcal Booster", "Flu Shot"],
+    "15Y": ["Tetanus Booster", "COVID-19 Vaccine"],
+    "16Y": ["Flu Shot", "Meningococcal Booster"]
+};
+        function updateVaccineList() {
+            let age = document.getElementById("age").value;
+            let vaccineDropdown = document.getElementById("vaccineName");
+            vaccineDropdown.innerHTML = `<option value="" disabled selected>Select Vaccine</option>`;
+
+            if (age && vaccineData[age]) {
+                vaccineData[age].forEach(vaccine => {
+                    let option = document.createElement("option");
+                    option.value = vaccine;
+                    option.textContent = vaccine;
+                    vaccineDropdown.appendChild(option);
+                });
+            }
+        }
+
+        function addVaccine() {
+            let age = document.getElementById("age").value;
+            let name = document.getElementById("vaccineName").value;
+            let date = document.getElementById("vaccineDate").value;
+            let dose = document.getElementById("doseNumber").value;
+
+            if (!age || !name || !date || !dose) {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            let vaccine = { age, name, date, dose };
+            let history = JSON.parse(localStorage.getItem("vaccineHistory")) || [];
+            history.push(vaccine);
+            localStorage.setItem("vaccineHistory", JSON.stringify(history));
+
+            document.getElementById("age").value = "";
+            document.getElementById("vaccineName").innerHTML = `<option value="" disabled selected>Select Age First</option>`;
+            document.getElementById("vaccineDate").value = "";
+            document.getElementById("doseNumber").value = "";
+
+            loadHistory();
+        }
+
+        function loadHistory() {
+            let historyList = document.getElementById("historyList");
+            historyList.innerHTML = "";
+
+            let history = JSON.parse(localStorage.getItem("vaccineHistory")) || [];
+
+            history.forEach((vaccine, index) => {
+                let row = `
+                    <tr>
+                        <td>${vaccine.age}</td>
+                        <td>${vaccine.name}</td>
+                        <td>${vaccine.date}</td>
+                        <td>${vaccine.dose}</td>
+                        <td><button class="delete-btn" onclick="deleteRecord(${index})">X</button></td>
+                    </tr>
+                `;
+                historyList.innerHTML += row;
+            });
+        }
+
+        function deleteRecord(index) {
+            let history = JSON.parse(localStorage.getItem("vaccineHistory")) || [];
+            history.splice(index, 1);
+            localStorage.setItem("vaccineHistory", JSON.stringify(history));
+            loadHistory();
+        }
+
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            let doc = new jsPDF();
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(18);
+            doc.text("Vaccination History ", 70, 20);
+
+            let history = JSON.parse(localStorage.getItem("vaccineHistory")) || [];
+            let y = 40;
+
+            doc.setFontSize(12);
+            history.forEach((vaccine, index) => {
+                doc.text(`${index + 1}. Age: ${vaccine.age}, Vaccine: ${vaccine.name}, Dose: ${vaccine.dose}, Date: ${vaccine.date}`, 10, y);
+                y += 10;
+            });
+
+            if (history.length === 0) {
+                doc.text("No vaccine records found!", 10, y);
+            }
+
+            doc.save("Vaccine_History.pdf");
+        }
+
+        document.addEventListener("DOMContentLoaded", loadHistory);
+    </script>
+
+</body>
+</html>

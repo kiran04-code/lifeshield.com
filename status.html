@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Vaccination & Disease Status</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e3f2fd;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            position: relative;
+            top: 50px;
+            left: 32%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 520px;
+            margin-bottom: 150px;
+            border-top: 5px solid #007bff;
+        }
+        h2 {
+            color: #007bff;
+            font-family: futura;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+            color: #333;
+            font-family: Teachers;
+            text-align: left;
+        }
+        input, select, textarea {
+            width: 90%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+        select {
+            width: 98%;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #0056b3;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            width: 200px;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 480px) {
+            .form-container {
+                max-width: 90%;
+                left: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navpart1">
+            <div class="life"><h1><i class="fa-solid fa-syringe" style="color: #ffffff;"></i> LifeShield</h1></div>
+            <div class="winning"><h5>Winning Over Disease</h5></div>
+        </div>
+        <div class="navpart2">
+            <a id="hdn2" href="index.html">HOME</a>
+            <a id="hdn2" href="#">ABOUT</a>
+            <a id="hdn2" href="services.html">SERVICES</a>
+            <a id="hdn2" href="#">MY PROFILE</a>
+            <a id="hdn2" href="register.html">REGISTER/ SIGN-IN</a>
+            <div class="bar">
+                <i id="bar" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </header>
+    
+    <div id="hidden" class="hidden">
+        <a id="hdn" href="index.html">HOME</a>
+        <a id="hdn" href="#">ABOUT</a>
+        <a id="hdn" href="services.html">SERVICES</a>
+        <a id="hdn" href="#">MY PROFILE</a>
+        <a id="hdn" href="register.html">REGISTER/ SIGN-IN</a>
+    </div>
+
+    <div class="form-container">
+        <h2>Report Vaccination & Disease Status</h2>
+        <form id="healthForm">
+            <label for="area">Your Area/City:</label>
+            <input type="text" id="area" name="area" placeholder="Enter your location" required>
+
+            <label for="disease">Common Diseases in Your Area:</label>
+            <textarea id="disease" name="disease" rows="3" placeholder="E.g., Dengue, Malaria" required></textarea>
+
+            <label for="vaccine">Vaccines You Have Received:</label>
+            <input type="text" id="vaccine" name="vaccine" placeholder="E.g., COVID-19, Polio" required>
+
+            <label for="status">Vaccination Status:</label>
+            <select id="status" name="status" required>
+                <option value="">Select Status</option>
+                <option value="fully_vaccinated">Fully Vaccinated</option>
+                <option value="partially_vaccinated">Partially Vaccinated</option>
+                <option value="not_vaccinated">Not Vaccinated</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="fotter">
+            <div class="fot1-1"><h3>VACCINATION SERVICES</h3> 
+                <p>Up-to-date info about vaccines</p>
+                <p>Age-based reminders</p>
+                <p>Vaccine history</p>
+                <p>Slot booking</p>
+            </div>
+            <div class="fot1-1"><h3>CONTACT US</h3>
+                <p>Helpline: +91-11-23978046 (Toll Free - 1075)</p>
+                <p>Technical Helpline: 7774025744</p>
+            </div>
+        </div>
+        <div class="fotter2">
+            <div class="fot2-1"><h3>All rights reserved © LifeShield, 2024. Designed by Team ASEP</h3></div>
+            <div class="fot2-2">
+                <a href="">Terms of Service</a>
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("healthForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting automatically
+            
+            let area = document.getElementById("area").value.trim();
+            let disease = document.getElementById("disease").value.trim();
+            let vaccine = document.getElementById("vaccine").value.trim();
+            let status = document.getElementById("status").value;
+
+            if (area === "" || disease === "" || vaccine === "" || status === "") {
+                alert("Please fill in all the fields.");
+                return;
+            }
+
+            alert("Thank you for your support! Your information has been submitted successfully.");
+            this.reset(); // Reset the form after successful submission
+        });
+    </script>
+
+</body>
+</html>

@@ -74,13 +74,18 @@ button.addEventListener("click" , function(){
         console.log(val)
         return true
     }
+    if( val == "mmr+opv" ){
+        window.location.href= "mmr+opv.html"
+        console.log(val)
+        return true
+    }
     if( val == "influenza" ){
         window.location.href= "influ.html"
         console.log(val)
         return true
     }
-    if( val == "mmr+opr" ){
-        window.location.href= ""
+    if( val == "MMR" ){
+        window.location.href= "MMR.html"
         console.log(val)
         return true
     }
@@ -89,8 +94,8 @@ button.addEventListener("click" , function(){
         console.log(val)
         return true
     }
-    if( val == "cervical cancer" ){
-        window.location.href= "cervical.html"
+    if( val == "cervicalcancer" ){
+        window.location.href= "cervicalcancer.html"
         console.log(val)
         return true
     }
@@ -154,6 +159,7 @@ tl.from("#leftm ,span", {
    
 
 })
+
 //====================================================================================================
     //    var loader = document.getElementById("loding");
     //    console.log(loader)

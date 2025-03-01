@@ -1,4 +1,4 @@
-
+module.exports= login()
 function showRegister() {
     document.getElementById('loginForm').style.display = 'none';
     document.getElementById('registerForm').style.display = 'block';
@@ -86,14 +86,14 @@ function login() {
         localStorage.setItem('loggedInUser', JSON.stringify(user)); // Save logged-in user
         console.log("Logged In User saved to localStorage:", user); // Debug log
         alert('Login successfully');
-        window.location.href = 'index.html'; // Redirect to another page
+        window.location.href = 'http://127.0.0.1:3000/index.html'; // Redirect to another page
     } else {
         alert('Invalid credentials!');
     }
 }
 function logout() {
     localStorage.removeItem('loggedInUser');
-    window.location.href = 'loginsyt.html';
+    window.location.href = 'http://localhost:3002/';
 }
 
 // Check login status on index page load
@@ -106,6 +106,6 @@ window.onload = function() {
         loginLink.href = 'profile.html';
     } else {
         loginLink.textContent = 'LOGIN';
-        loginLink.href = 'http://localhost:3001/';
+        loginLink.href = 'http://localhost:3002/';
     }
 };

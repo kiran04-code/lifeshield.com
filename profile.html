@@ -16,7 +16,7 @@
              <div class="winning"><h5>winning over disease</h5></div>
          </div>
          <div class="navpart2">
-             <a id="hdn2"   href="#">HOME</a>
+             <a id="hdn2"   href="index.html">HOME</a>
              <a id="hdn2"   href="#">ABOUT</a>
              <a id="hdn2"  href="services.html">SERVICES</a>
              <a id="hdn2"  href="#">FAQ</a>
@@ -33,7 +33,7 @@
          <a id="hdn" href="index.html">HOME</a>
          <a id="hdn" href="">ABOUT</a>
          <a id="hdn" href="services.html">SERVICES</a>
-         <a id="hdn" href="profile.html">MY PROFILE</a>
+         <a id="hdn" href="profile .html">MY PROFILE</a>
          <a   id="hdn" href="register.html">REGISTER/ SIGN-IN</a>
         </div>
     <div class="profile-container">
@@ -41,6 +41,7 @@
       <div class="pmain"><div class="prf"><i class="fa-solid fa-user" ></i></div></div>
         <div id="profileInfo"></div>
         <button onclick="logout()" class="logout-btn">Logout</button>
+        <a    href="vaccinehis.html"><button  id="button1"   class="logout-btn">Add Vaccine  history</button></a> 
         <a href="index.html" class="home-link">Back to Home</a>
     </div>
     <footer>
@@ -62,11 +63,15 @@
      <div class="fot2-2"><a href="">Terms of service</a><a href="">privacy policy</a></div>
         </div>
     </footer>
-<script src="script.js"></script>
+   <script src="script.js"></script>
+   <script src="mongo.js"></script>
     <script src="auth.js"></script>
     <script>
+     
         document.addEventListener('DOMContentLoaded', () => {
+        
             const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            console.log(user.username)
             if (user) {
                 document.getElementById('profileInfo').innerHTML = `
                     <p>Username: ${user.username}</p>
@@ -74,7 +79,7 @@
                     <p>Age: ${user.age}</p>
                 `;
             } else {
-                window.location.href = 'login.html';
+                window.location.href = 'http://localhost:3002/';
             }
         });
     </script>

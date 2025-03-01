@@ -6,9 +6,9 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Login/Signup </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-
     <main id="main">
         <header>
          <div class="navpart1">
@@ -16,14 +16,14 @@
              <div class="winning"><h5>winning over disease</h5></div>
          </div>
          <div class="navpart2">
-             <a id="hdn2"   href="http://127.0.0.1:3004/index.html">HOME</a>
+             <a id="hdn2"   href="http://127.0.0.1:3000/index.html">HOME</a>
              <a id="hdn2"   href="#">ABOUT</a>
              <a id="hdn2"  href="services.html">SERVICES</a>
              <a id="hdn2"  href="#">FAQ</a>
              <div class="nav-links">
                  <a href="#" id="loginLink">REGISTER</a>
              </div>
-             <!-- <i  id="user-new" class="fa-solid fa-user" style="color: #ffffff;"></i> -->
+             <!--<i  id="user-new" class="fa-solid fa-user" style="color: #ffffff;"></i>--> 
              <div class="bar">
                  <i id="bar" class="fa-solid fa-bars" style="color: #ffffff;"></i>
              </div>
@@ -34,12 +34,23 @@
          <a id="hdn" href="#">ABOUT</a>
          <a id="hdn" href="services.html">SERVICES</a>
          <a id="hdn" href="">MY PROFILE</a>
-         <a   id="hdn" href="http://localhost:3001/">REGISTER/ SIGN-IN</a>
+         <a   id="hdn" href="http://localhost:3002/">REGISTER/ SIGN-IN</a>
+        </div>
+        <div class="jugad">
+            <div class="profile-container">
+                <h1>Your Profile</h1>
+              <div class="pmain"><div class="prf"><i class="fa-solid fa-user" ></i></div></div>
+                <div id="profileInfo"></div>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+                <a    href="http://127.0.0.1:3000/vaccinehis.html"><button  id="button1"   class="logout-btn">Add Vaccine  history</button></a> 
+                <a href="http://127.0.0.1:3000/index.html" class="home-link">Back to Home</a>
+            </div>
         </div>
     <div class="holebox">
+     
     <div class="contaner">
        <div class="from-box login">
-        <form action="/login" method="post">
+        <form action="/login" method="POST">
             <h1>Login</h1>
             <div class="input-box">
                 <input type="text" placeholder="Username" name="username" id="loginUsername"  required >
@@ -49,7 +60,7 @@
                 <input type="password" placeholder="password"name="password"  id="loginPassword"  required>
             <i class="fa-solid fa-lock" style="color: #000000;"></i>
             </div>
-              <button type="button" class="button"  onclick="login()"   >Login</button>
+              <button type="button" class="button"  onclick="login()">Login</button>
         </form>
        </div>
        <div class="from-box rigister">
@@ -62,6 +73,11 @@
             </div>
             <div class="input-box">
                 <input type="tel" name="MobileNumber"   id="registerMobile"   placeholder="Number" required />
+                <i class="fa-solid fa-square-phone" style="color: #000000;"></i>
+                <span id="validm" class="valid2"></span>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email"   id="registeremail"   placeholder="Email" required />
                 <i class="fa-solid fa-square-phone" style="color: #000000;"></i>
                 <span id="validm" class="valid2"></span>
             </div>
@@ -92,6 +108,7 @@
      </div>
     </div>
     </div>
+    
     <footer>
         <div class="fotter">
             <div class="fot1-1"><h3>VACCINATION SERVICES</h3> <p>Up to date info about vaccine</p>
@@ -129,14 +146,129 @@ body{
 .holebox{
     min-height: 100vh;
   display: flex;
+ margin-left: 20%;
   align-items: center;
  justify-content: center;
  background: linear-gradient(90deg, #fdfcfc,#acb9e4);
 }
+.jugad{
+    height: 400px;
+    width: 20%;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    left: 10%;
+   
+}
+/* Profile container styling */
+.profile-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Profile icon styling */
+.pmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.prf {
+    width: 80px;
+    height: 80px;
+    background: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prf i {
+    font-size: 40px;
+    color: white;
+}
+
+/* Profile info section */
+#profileInfo {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logout-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+#button1 {
+    background: #0c00f9;
+    color: white;
+}
+
+#button1:hover {
+    background: #218838;
+}
+
+/* Home link styling */
+.home-link {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+#profileInfo{
+    margin-top: 15px;
+    gap: 15px;
+}
+#profileInfo p{
+    margin-top: 15px;
+    text-transform: capitalize;
+    font-family: Teachers;
+   
+}
+.pmain{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .contaner{
     position: relative;
-    width: 750px;
-    height:450px;
+    width: 650px;
+    height:550px;
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
     overflow: hidden;
@@ -147,6 +279,7 @@ body{
     visibility: hidden;
 
 }
+
 .contaner.active .from-box.rigister{
     visibility: visible;
 }
@@ -1338,6 +1471,7 @@ right: 20px;
 
     </style>
     <script src="auth.js"></script>
+    <script src="mongo.js"></script>
     <script>
   const contaner = document.querySelector('.contaner');
   const registerBtn = document.querySelector('.button.register-btn');
@@ -1372,6 +1506,7 @@ function register() {
     // Username validation
     if (username.trim() === "") {
         span3.innerHTML = `Username cannot be empty.`;
+        username.style.border= '2px solid red'
         return; // Stop execution if username is invalid
     }
     if(isNaN(age)){
@@ -1386,13 +1521,7 @@ function register() {
         return; // Stop execution if username is invalid
     }
     const usernamePattern = /^[a-zA-Z0-9_]+$/;
-    if (!usernamePattern.test(username)) {
-        
-        span3.innerHTML = `Username can only contain letters, numbers, and underscores.`;
-        return; // Stop execution if username contains invalid characters
-    } 
-    span3.innerHTML = ''; // Clear username error if valid
-    
+  
     // Password validation
     if (password.length !== 6) {
         span2.innerHTML = `Enter the minimum 6-digit password!`;
@@ -1436,15 +1565,17 @@ function login() {
     if (user) {
         localStorage.setItem('loggedInUser', JSON.stringify(user)); // Save logged-in user
         console.log("Logged In User saved to localStorage:", user); // Debug log
-        alert('Login successfully');
-        window.location.href = 'index.html'; // Redirect to another page
+        
+        alert('Login successfully'); 
+        window.location.href = 'http://localhost:3002/'; // Redirect to another page
     } else {
         alert('Invalid credentials!');
     }
 }
+
 function logout() {
     localStorage.removeItem('loggedInUser');
-    window.location.href = 'loginsyt.html';
+    window.location.href = 'http://localhost:3002/';
 }
 
 // Check login status on index page load
@@ -1456,10 +1587,24 @@ window.onload = function() {
         loginLink.textContent = ' PROFILE';
         loginLink.href = 'profile.html';
     } else {
-        loginLink.textContent = 'Login';
-        loginLink.href = 'loginsyt.html';
+        loginLink.textContent = 'LOGIN';
+        loginLink.href = 'http://localhost:3002/';
     }
 };
+document.addEventListener('DOMContentLoaded', () => {
+        
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        console.log(user.username)
+        if (user) {
+            document.getElementById('profileInfo').innerHTML = `
+                <p>Username: ${user.username}</p>
+                <p>Mobile: ${user.mobile}</p>
+                <p>Age: ${user.age}</p>
+            `;
+        } else {
+            window.location.href = 'http://localhost:3002/';
+        }
+    });
     </script>
     
 </body>
