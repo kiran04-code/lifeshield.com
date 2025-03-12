@@ -1,0 +1,11 @@
+//==================New need to Complte this project in 2 Month=============================================> 
+make resposive 
+make this  project readeable 
+book slot near by vaccine center 
+give detail about the all hospital in india!! 
+give every year age based vaccine reminder  to user  login onces time
+add authorazation and work on login systeam and using not use brower localstorege 
+add chat boot for more doubte!!
+// ===================scedule to work  on this project ==========================>
+1 every day 2 hr on there design and resposive ness !!
+
