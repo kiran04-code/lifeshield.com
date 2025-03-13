@@ -66,42 +66,54 @@ html, body {
        background-color: #1900ff;
        color: #ffffff;
     }
+    
     .dj{
         margin-top: 5%;
         height: 400px;
         width: 100%;
     } 
-   
+   .kk{
+        margin-top: 10px;
+      background-color: red;
+   }
+   @media (max-width: 500px){
+    #hospitalDetails button {
+    margin-top: 20px;
+    }
+   }
   </style>
 </head>
 <body>
     <main id="main">
-        <header>
-         <div class="navpart1">
-             <div class="life"><h1><i class="fa-solid fa-syringe" style="color: #ffffff;"></i> LifeShield</h1></div>
-             <div class="winning"><h5>winning over disease</h5></div>
-         </div>
-         <div class="navpart2">
-             <a id="hdn2"   href="http://127.0.0.1:3000/index.html">HOME</a>
-             <a id="hdn2"   href="#">ABOUT</a>
-             <a id="hdn2"  href="services.html">SERVICES</a>
-             <a id="hdn2"  href="#">FAQ</a>
-             <div class="nav-links">
-                 <a href="#" id="loginLink">REGISTER</a>
-             </div>
-             <!-- <i  id="user-new" class="fa-solid fa-user" style="color: #ffffff;"></i> -->
-             <div class="bar">
-                 <i id="bar" class="fa-solid fa-bars" style="color: #ffffff;"></i>
-             </div>
-         </div>
-        </header>
-        <div id="hidden" class="hidden">
-         <a id="hdn" href="index.html">HOME</a>
-         <a id="hdn" href="#">ABOUT</a>
-         <a id="hdn" href="services.html">SERVICES</a>
-         <a id="hdn" href="">MY PROFILE</a>
-         <a   id="hdn" href="http://localhost:3001/">REGISTER/ SIGN-IN</a>
+      <header>
+        <div class="navpart1">
+            <div class="life"><h1><i id="remove"  class="fa-solid fa-syringe" style="color: #09125f;"></i> LifeShield</h1></div>
+            <div class="winning"><h5>winning over disease</h5></div>
         </div>
+        <div class="navpart2">
+            <a id="hdn2"  href="index.html">HOME</a>
+            <a id="hdn2"   href="abt.html">ABOUT</a>
+            <a id="hdn2"  href="services.html">SERVICES</a>
+            <a id="hdn2"  href="FAQS.HTML">FAQ</a>
+            <a id="hdn2"  href="map.html">SEARCH NEAR VACCINE CENTER</a>
+            <!-- <div class="nav-links">
+                <a href="http://localhost:3002/" id="loginLink">REGISTER/PROFLE</a>
+            </div> -->
+            <a  href="http://localhost:3002/" id="hdn2">REGISTER/PROFLE</a>
+            <!-- <i  id="user-new" class="fa-solid fa-user" style="color: #ffffff;"></i> -->
+            <div class="bar">
+                <i id="bar" class="fa-solid fa-bars" style="color: #081085;"></i>
+            </div>
+        </div>
+       </header>
+       <div class="kkd"></div>
+       <div id="hidden" class="hidden">
+        <a id="hdn" href="index.html">HOME</a>
+        <a id="hdn" href="abt.html">ABOUT</a>
+        <a id="hdn" href="services.html">SERVICES</a>
+        <a  href="http://localhost:3002/">REGISTER/PROFLE</a>
+        <a id="hdn2"  href="map.html">SEARCH NEAR VACCINE CENTER</a>    
+       </div>
         <div class="m"> <h1>Hospital Details</h1></div>
   <div class="dj">
   

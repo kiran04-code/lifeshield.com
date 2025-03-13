@@ -3,7 +3,6 @@ const bar = document.getElementById("bar");
 const hiddenMenu = document.getElementById("hidden");
 
 bar.addEventListener("click", function() {
-   
     if (hiddenMenu.style.display === "none" || hiddenMenu.style.display === "") {
         hiddenMenu.style.display = "flex";
     } else {
