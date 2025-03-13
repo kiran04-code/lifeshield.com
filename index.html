@@ -110,6 +110,14 @@ width: 100%;
       <button><a href="http://localhost:3002/">REGISTER/ SIGN-IN</a></button>
     </div>
    </div> -->
+   <div id="loader">
+    <h1>HEALTHY</h1>
+           
+    <h1>STRONG</h1>
+          
+    <h1>READY</h1>
+          
+   </div>
     <main id="main">
    <header>
     <div class="navpart1">
@@ -183,35 +191,7 @@ width: 100%;
     </div>
     </div>
 </div>
-<div id="page2">
-    <div id="movingtext">
-        <div class="con">
-            <h1>EXPERIENCES</h1>
-            <div id="gola"></div>
-            <h1>CONTENT</h1>
-            <div id="gola"></div>
-            <h1>ENVIRONMENTS</h1>
-            <div id="gola"></div>
-        </div>
-        <div class="con">
-            <h1>EXPERIENCES</h1>
-            <div id="gola"></div>
-            <h1>CONTENT</h1>
-            <div id="gola"></div>
-            <h1>ENVIRONMENTS</h1>
-            <div id="gola"></div>
-        </div>
-        <div class="con">
-            <h1>EXPERIENCES</h1>
-            <div id="gola"></div>
-            <h1>CONTENT</h1>
-            <div id="gola"></div>
-            <h1>ENVIRONMENTS</h1>
-            <div id="gola"></div>
-        </div>
-    </div>
-</div>
-</div>
+
 <div class="block">
     <div class="b1"><h2>Secure and Easy to use platfrom</h2></div>
     <divid id="b2" class="b1"><h2>Comprehensive support for all your vaccination needs.</h2></div>
@@ -322,6 +302,7 @@ width: 100%;
     <div class="sev1"><h2>Lifeshield Services </h2></div>
     <div class="sev2"><h1> See our Lifeshield Vaccination Services</h1></div>
 </div>
+
 <!-----SERVICES---------------------------------------------------------------------------------------------------------->
 <div class="serv">
     <div class="serv1">
@@ -361,6 +342,35 @@ width: 100%;
             </div>
            </div>
     </div>
+</div>
+<div id="page2">
+    <div id="movingtext">
+        <div class="con">
+            <h1>HEALTHY</h1>
+            <div id="gola"></div>
+            <h1>STRONG</h1>
+            <div id="gola"></div>
+            <h1>READY</h1>
+            <div id="gola"></div>
+        </div>
+        <div class="con">
+            <h1>HEALTHY</h1>
+            <div id="gola"></div>
+            <h1>STRONG</h1>
+            <div id="gola"></div>
+            <h1>READY</h1>
+            <div id="gola"></div>
+        </div>
+        <div class="con">
+            <h1>HEALTHY</h1>
+            <div id="gola"></div>
+            <h1>STRONG</h1>
+            <div id="gola"></div>
+            <h1>READY</h1>
+            <div id="gola"></div>
+        </div>
+    </div>
+</div>
 </div>
 <div class="endse"><h2>Vaccination Schedule: Government & Non-Government Hospitals
 </h2></div>
@@ -459,6 +469,11 @@ width: 100%;
     stagger: 0.3,   // Delay between each word
     ease: "power2.out"
 });
+
+setTimeout(function(){
+    const loader= document.getElementById("loader")
+    loader.style.top ="-100%"
+},3700)
     </script>
 </body>
 </html>

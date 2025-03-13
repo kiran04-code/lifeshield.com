@@ -14,12 +14,62 @@ html, body {
     height: 100%;
     width: 100%;
 }
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 1s;
+}
+#loader h1{
+   color: transparent;
+   font-family: futura;
+   opacity: 0;
+   font-size: 4vw;
+   background: linear-gradient(to right, #1552F0, #4d8eff);
+   -webkit-background-clip: text;
+   position: absolute;
+   animation-name: loder;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+   
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
 
+@keyframes loder {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 header {
    width: 100%;
    height: 60px;
    /* background: linear-gradient(to right, #0A1F44, #1552F0, #76A9FF); */
    display: flex;
+} 
+#page2{
+   margin-top: 100px;
+  
 }
 #movingtext{
     white-space: nowrap;
@@ -35,7 +85,7 @@ header {
 
 }
 #movingtext h1{
-   font-size: 3.5vw;
+   font-size: 3.3vw;
    font-family: futura;
    display: inline-block;
  
@@ -45,6 +95,7 @@ header {
      width: 3vw;
      border-radius: 50%;
      margin-left: 1vw;
+     filter: blur(1.5px);
      margin-right: 1vw;
      display: inline-block;
      background: linear-gradient(to right, #0A1F44, #1552F0, #76A9FF); 
@@ -927,6 +978,7 @@ object-fit: cover;
     height: 100px;
     width: 100%;
     margin-top: 2%;
+    
    
 }
 .sev1{
@@ -1077,6 +1129,11 @@ object-fit: cover;
 .dropdown-content::-webkit-scrollbar{
     display: none;
 }
+.fot2-2 h4{
+    
+    position: relative;
+    right: 10px;
+}
 .dropdown-content div {
     padding: 11px;
     font-weight: 500;
@@ -1102,7 +1159,30 @@ object-fit: cover;
     border: 2px solid rgb(251, 0, 38);
 }
 @media (max-width: 500px) {
-
+.serv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    height: 100%;
+}
+.serv1{
+    width: 78%;
+   min-height:50%;
+}
+.sev2{
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.endse{
+    font-size: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
     .fillinfo{
         display: flex;
         flex-direction: column;
@@ -1419,7 +1499,19 @@ object-fit: cover;
       right: 30px;
       
     }
-    
+    .bar i{
+       margin-right: 35px
+    }
+    .fot2-2 h4{
+        font-size: 2vw;
+        position: relative;
+        right: 20px;
+    }
+    .fot1-1 h2{
+        font-size: 3vw;
+        position: relative;
+        top: 20px;
+    }
     };
 @media (max-width: 700px) {
     .navpart2 a {
