@@ -75,6 +75,10 @@ header {
     white-space: nowrap;
     overflow-x: auto; 
 }
+#movingtext::-webkit-scrollbar{
+    display: none;
+  
+}
 .con{
     white-space: nowrap;
     display: inline-block;
